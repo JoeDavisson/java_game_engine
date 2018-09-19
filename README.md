@@ -4,16 +4,6 @@ A java game engine that does pixel-perfect collisions on rotated, scaled, and li
 
 There are three sample games: ShootSomeRocks (an Asteroids-type game), Simple and MahJongg.
 
-![Screenshot](/games/ShootSomeRocks/ShootSomeRocks.jpg "Screenshot")
-![Screenshot](/screenshots/ShootSomeRocks1.jpg "Screenshot")
-![Screenshot](/screenshots/ShootSomeRocks2.jpg "Screenshot")
-![Screenshot](/screenshots/ShootSomeRocks3.jpg "Screenshot")
-![Screenshot](/screenshots/ShootSomeRocks4.jpg "Screenshot")
-
-![Screenshot](/games/MahJongg/MahJongg.jpg "Screenshot")
-![Screenshot](/screenshots/MahJongg1.jpg "Screenshot")
-![Screenshot](/screenshots/MahJongg2.jpg "Screenshot")
-
 ## Building
 
 Run `./gradlew fatJar`.
@@ -41,3 +31,15 @@ The game is built automatically if necessary.
 ## Clean generated files
 
 To delete all compiled files and generated jars, run `./gradlew clean`.
+
+## Screenshots
+
+![Screenshot](/games/ShootSomeRocks/ShootSomeRocks.jpg "Screenshot")
+![Screenshot](/screenshots/ShootSomeRocks1.jpg "Screenshot")
+![Screenshot](/screenshots/ShootSomeRocks2.jpg "Screenshot")
+![Screenshot](/screenshots/ShootSomeRocks3.jpg "Screenshot")
+![Screenshot](/screenshots/ShootSomeRocks4.jpg "Screenshot")
+
+![Screenshot](/games/MahJongg/MahJongg.jpg "Screenshot")
+![Screenshot](/screenshots/MahJongg1.jpg "Screenshot")
+![Screenshot](/screenshots/MahJongg2.jpg "Screenshot")
