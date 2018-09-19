@@ -12,12 +12,25 @@ allprojects {
 
 subprojects {
     dependencies {
-        compile project(':')
+        compile project( ':' )
     }
 
-    task fatJar(type: Jar) {
+    task fatJar( type: Jar ) {
         baseName = "${project.name}-applet"
-        from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+        from { configurations.compile.collect { it.isDirectory() ? it : zipTree( it ) } }
         with jar
+    }
+}
+
+tasks.addRule( "Pattern: play<Game>" ) { String taskName ->
+    if ( taskName.startsWith( "play" ) ) {
+        def game = project( ":games/${taskName.substring( 4 )}" )
+        def gameName = game.name.substring( game.name.indexOf( '/' ) + 1 )
+        task( taskName, type: Exec ) { t ->
+            println "Starting game ${gameName} in directory ${game.projectDir}"
+            dependsOn game.tasks.fatJar
+            workingDir game.projectDir
+            commandLine 'appletviewer', "${gameName}.html"
+        }
     }
 }
