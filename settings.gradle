@@ -1,0 +1,2 @@
+rootProject.name = 'game2d'
+include '', 'games/Infested', 'games/MahJongg', 'games/ShootSomeRocks', 'games/Small'
